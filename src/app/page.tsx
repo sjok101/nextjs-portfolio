@@ -20,23 +20,22 @@ export default async function Home() {
 
   return (
     <div id="head" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
-      <div className="h-[8vh]"></div>
+      <div className="h-[80px]"></div>
       <NavBar/>
       <TopButton/>
       <BackgroundInfo/>
-      <div id="autoslider" className="h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
-        <h2 className="text-3xl font-semibold text-white">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
-        <div className="h-[8vh]"></div>
+      <div id="autoslider" className=" min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+        <h2 className="m-10 text-3xl font-semibold text-white">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
         <AutoSlider projects={projects}/>
         <SocialMedia/>
       </div>      
-      <div id="about" className="h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+      <div id="about" className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
         <About aboutMe={aboutMe}/>
       </div>
-        <div id="projects" className="h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+        <div id="projects" className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
         <ProjectDisplay projects={projects}/>
       </div>
-        <div id="contact" className="h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+        <div id="contact" className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
         <Contact/>
       </div>
     </div>

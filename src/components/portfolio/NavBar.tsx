@@ -5,7 +5,7 @@ import Link from "next/link"
 export default function NavBar(){
     const navButtonStyle = "mx-3 flex justify-center items-center h-[45px] w-[90px] hover:bg-gradient-to-r from-sky-400 to-transparent text-white font-semibold text-opacity-90";
     return(
-        <div className="z-10 absolute left-1/2 transform -translate-x-1/2 mx-auto flex items-center h-[45px] w-[70vw] min-w-225 bg-gradient-to-r from-sky-500 to-sky-700 border-blue-950 rounded">
+        <div className="z-10 mx-auto flex items-center h-[45px] w-[70vw] min-w-225 bg-gradient-to-r from-sky-500 to-sky-700 border-blue-950 rounded">
 
             <Link href="#about" scroll={true} className={navButtonStyle}>
                 <span className="cursor-pointer">About Me</span>
