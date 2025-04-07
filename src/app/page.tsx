@@ -19,7 +19,7 @@ export default async function Home() {
   const projects : IProject[] = JSON.parse(JSON.stringify(mongooseProjects));
 
   return (
-    <div id="head" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
+    <div id="top" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
       <div className="h-[80px]"></div>
       <NavBar/>
       <TopButton/>
