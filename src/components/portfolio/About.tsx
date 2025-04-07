@@ -1,24 +1,21 @@
 import { IAboutMe } from "@/models/aboutMe";
 
 export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
+    
+    
     return(
-        <div className="z-10 border-black bg-slate-800 bg-opacity-80 text-slate-300
-                         h-[800px]">
+        <div className="z-10">
+            <button id="about-left">Left</button>
+        <div className=" border-black bg-slate-800 bg-opacity-80 text-slate-300
+                         h-[600px] flex flex-row items-start">
             
-            <p className="">Hey there, my name is {aboutMe!.name}!</p>
-            <img src="https://www.placehold.co/100x100"></img>
-            <p>Just to quickly describe myself, I am an aspiring developer who took a major leap through
-                careers to get to this point. What is this point? Well, I took a 2 year hiatus away from remodeling
-                homes and enrolled at George Mason University for a Computer Science Degree. Why you ask? The world is ever changing
-                and technology has been and will be at its forefront, learning computer science now will not only improve my life 
-                but hopefully my families' life and the future of all!
-            </p>
-            <br></br>
-            <p>Things other than wanting to debug types in TS... I spend a healthy amount of time together
-                with my family, and the rest developing 2D games and participating in gamejams for fun. Here is a
-                game jam that I recently participated in!
-            </p>
-            <img src="https://www.placehold.co/100x100"></img>
+            <img src="https://www.placehold.co/800x600"></img>
+            <div className="w-[250px] text-center">
+                <p className="text-left p-5 pt-7">{aboutMe!.heading[0]}</p>
+                <p className="text-left px-5">{aboutMe!.description[0]}</p>
+            </div>
+        </div>
+            <button id="about-right">Right</button>
         </div>
     )
 }
