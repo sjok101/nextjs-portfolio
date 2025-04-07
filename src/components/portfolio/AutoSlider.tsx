@@ -20,10 +20,10 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
 
     return(
 
-        <div className=" border relative transition duration-500 ease-in-out w-120 mx-auto ">
+        <div className="h-125 w-225 border relative transition duration-500 ease-in-out mx-auto ">
             <div 
             key={projects[count]._id as string}
-            className={`transition-opacity duration-500 bg-slate-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+            className={`h-125 w-225 transition-opacity duration-500 bg-slate-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
             >
                 <h3 className = "text-xl font-semibold">{projects[count].name}</h3>
                 <p className="text-gray-600">{projects[count].description}</p>
