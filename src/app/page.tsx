@@ -14,7 +14,8 @@ import BackgroundInfo from "@/components/portfolio/BackgroundInfo";
 
 export default async function Home() {
   await connectDB();
-  const aboutMe: IAboutMe | null = await AboutMe.findOne({});
+  const mongooseAboutMe: IAboutMe | null = await AboutMe.findOne({});
+  const aboutMe: IAboutMe = JSON.parse(JSON.stringify(mongooseAboutMe));
   const mongooseProjects: IProject[] | null = await Project.find({});
   const projects : IProject[] = JSON.parse(JSON.stringify(mongooseProjects));
 
