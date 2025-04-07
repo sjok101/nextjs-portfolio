@@ -2,9 +2,10 @@ import { IAboutMe } from "@/models/aboutMe";
 
 export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
     return(
-        <div className="border bg-indigo-800 bg-opacity-80">
+        <div className="z-10 border-black bg-slate-800 bg-opacity-80 text-slate-300
+                         h-[800px]">
             
-            <p>Hey there, my name is {aboutMe!.name}!</p>
+            <p className="">Hey there, my name is {aboutMe!.name}!</p>
             <img src="https://www.placehold.co/100x100"></img>
             <p>Just to quickly describe myself, I am an aspiring developer who took a major leap through
                 careers to get to this point. What is this point? Well, I took a 2 year hiatus away from remodeling
