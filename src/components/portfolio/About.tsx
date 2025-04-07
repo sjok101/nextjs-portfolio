@@ -2,7 +2,7 @@ import { IAboutMe } from "@/models/aboutMe";
 
 export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
     return(
-        <div className="border">
+        <div className="border bg-indigo-800 bg-opacity-80">
             
             <p>Hey there, my name is {aboutMe!.name}!</p>
             <img src="https://www.placehold.co/100x100"></img>

@@ -8,7 +8,7 @@ export default function Contact(){
     return(
         //implement a contact form
         //send the data via router
-        <div>
+        <div className="bg-indigo-800">
             <form action={handleSubmit}>
             
                 <input

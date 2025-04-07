@@ -8,7 +8,7 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
         console.log(project)
       ))
     return(
-        <div className="border">
+        <div className="border bg-indigo-800">
             This is a Project Display section.
             <ul>
                 <li><Project project={projects[0]}/></li>

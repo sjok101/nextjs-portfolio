@@ -20,7 +20,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
 
     return(
 
-        <div className="relative transition duration-500 ease-in-out border">
+        <div className=" border relative transition duration-500 ease-in-out w-120 mx-auto ">
             <div 
             key={projects[count]._id as string}
             className={`transition-opacity duration-500 bg-slate-300 ${fade ? 'opacity-100' : 'opacity-0'}`}

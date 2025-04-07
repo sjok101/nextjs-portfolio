@@ -14,26 +14,35 @@ export default async function Home() {
   const projects : IProject[] = JSON.parse(JSON.stringify(mongooseProjects));
 
   return (
-    <div>
-      <h2 className="text-3xl font-semibold">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
-      <br></br>
-      Add small logo with my name that links to my resume called profile. 
-      Add Link to About me.
-      Add Link to Projects section.
+    <div className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
+      <div id="section-one" className="h-screen w-full">
+        <h2 className="text-3xl font-semibold">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
+        <br></br>
+        Add small logo with my name that links to my resume called profile. 
+        Add Link to About me.
+        Add Link to Projects section.
 
-      Include search bar that shows my projects.
-      <br></br>
-      <AutoSlider projects={projects}/>
-      <br></br>
+        Include search bar that shows my projects.
+        <br></br>
+        <AutoSlider projects={projects}/>
+      </div>
 
       Add education and skills to the left. A general resume icon, Github, LinkedIn, Contact.
-      <br></br><br></br>
-      <About aboutMe={aboutMe}/>
+      <div>
+        <ul>
+          <li>skills</li>
+        </ul>
+      </div>
       
-      <br></br>
+      <div id="section-two" className="h-screen w-full">
+        <About aboutMe={aboutMe}/>
+      </div>
+        <div id="section-three" className="h-screen w-full">
       <ProjectDisplay projects={projects}/>
-      <br></br>
+      </div>
+        <div id="section-four" className="h-screen w-full">
       <Contact/>
+      </div>
     </div>
   );
 
