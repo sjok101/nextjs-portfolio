@@ -5,6 +5,9 @@ import ProjectDisplay from "@/components/portfolio/ProjectDisplay";
 import { connectDB } from "@/util/mongoDB";
 import { AboutMe, IAboutMe } from "@/models/aboutMe";
 import { Project, IProject } from "@/models/projects";
+import Link from "next/link";
+import NavBar from "@/components/portfolio/NavBar";
+import TopButton from "@/components/portfolio/TopButton";
 
 
 export default async function Home() {
@@ -14,8 +17,11 @@ export default async function Home() {
   const projects : IProject[] = JSON.parse(JSON.stringify(mongooseProjects));
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
-      <div id="section-one" className="h-screen w-full">
+    <div id="head" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
+      
+      <NavBar/>
+      <TopButton/>
+      <div id="autoslider" className="h-screen w-full">
         <h2 className="text-3xl font-semibold">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
         <br></br>
         Add small logo with my name that links to my resume called profile. 
@@ -34,13 +40,13 @@ export default async function Home() {
         </ul>
       </div>
       
-      <div id="section-two" className="h-screen w-full">
+      <div id="about" className="h-screen w-full">
         <About aboutMe={aboutMe}/>
       </div>
-        <div id="section-three" className="h-screen w-full">
+        <div id="projects" className="h-screen w-full">
       <ProjectDisplay projects={projects}/>
       </div>
-        <div id="section-four" className="h-screen w-full">
+        <div id="contact" className="h-screen w-full">
       <Contact/>
       </div>
     </div>

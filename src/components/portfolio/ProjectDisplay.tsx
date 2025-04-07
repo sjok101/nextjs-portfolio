@@ -3,10 +3,7 @@ import { IProject } from "@/models/projects";
 import Project from "./Project";
 
 export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
-    
-    projects.map((project) => (
-        console.log(project)
-      ))
+
     return(
         <div className="border bg-indigo-800">
             This is a Project Display section.
