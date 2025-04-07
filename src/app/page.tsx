@@ -18,18 +18,13 @@ export default async function Home() {
 
   return (
     <div id="head" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
-      
+      <div className="h-5"></div>
       <NavBar/>
+      <div className="h-5"></div>
       <TopButton/>
       <div id="autoslider" className="h-screen w-full">
         <h2 className="text-3xl font-semibold">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
-        <br></br>
-        Add small logo with my name that links to my resume called profile. 
-        Add Link to About me.
-        Add Link to Projects section.
-
-        Include search bar that shows my projects.
-        <br></br>
+        <div className="h-5"></div>
         <AutoSlider projects={projects}/>
       </div>
 
