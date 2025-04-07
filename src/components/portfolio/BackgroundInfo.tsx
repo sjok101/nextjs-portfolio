@@ -15,11 +15,11 @@ export default function BackgroundInfo(){
     
     
     return(
-        <div className={`z-0 absolute top-5 left-10 bg-slate-100
+        <div className={`z-0 text-slate-300/75 font-semibold absolute top-40 left-10 bg-gradient-to-l from-sky-500/50 to-transparent
                          transition-opacity duration-200 ease-in-out
                          ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <li>
-                <ul><h3>Education:</h3></ul>
+            
+                <ul className="text-xl">Education:</ul>
                 <ul>School Here</ul>
                 <ul>Year Graduated</ul>
                 <br></br>
@@ -27,7 +27,7 @@ export default function BackgroundInfo(){
                 <ul>React</ul>
                 <ul>JavaScript</ul>
                 <ul></ul>
-            </li>
+            
         </div>
     )
 }
