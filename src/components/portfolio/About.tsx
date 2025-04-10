@@ -43,7 +43,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
             <button 
             onClick={() => setLeftClicked(true)}
             id="about-left" className={buttonStyle}>Left</button>
-        <div className= {`border-black bg-slate-800 bg-opacity-80 text-slate-300
+        <div className= {`border-black bg-slate-900/50 bg-opacity-80 text-slate-300
                          h-[600px] w-[1000px] flex flex-row items-start
                          transition-opacity ease-in-out duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}>
             
