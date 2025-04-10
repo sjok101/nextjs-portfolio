@@ -15,7 +15,7 @@ export default function BackgroundInfo(){
     
     
     return(
-        <div className={`p-6 z-0 text-slate-300/75 font-semibold absolute top-50 left-10 bg-gradient-to-l from-sky-500/50 to-transparent
+        <div className={`p-6 z-0 text-slate-200/90 font-semibold absolute top-50 left-10 bg-gradient-to-l from-sky-500/50 to-transparent
                          transition-opacity duration-200 ease-in-out
                          ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             
