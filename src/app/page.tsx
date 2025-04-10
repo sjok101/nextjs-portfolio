@@ -5,7 +5,6 @@ import ProjectDisplay from "@/components/portfolio/ProjectDisplay";
 import { connectDB } from "@/util/mongoDB";
 import { AboutMe, IAboutMe } from "@/models/aboutMe";
 import { Project, IProject } from "@/models/projects";
-import Link from "next/link";
 import NavBar from "@/components/portfolio/NavBar";
 import TopButton from "@/components/portfolio/TopButton";
 import SocialMedia from "@/components/portfolio/SocialMedia";
@@ -30,13 +29,13 @@ export default async function Home() {
         <AutoSlider projects={projects}/>
         <SocialMedia/>
       </div>      
-      <div id="about" className="my-20 w-full flex flex-col justify-center items-center space-y-6 p-4">
+      <div id="about" className="my-40 w-full flex flex-col justify-center items-center space-y-6 p-4">
         <About aboutMe={aboutMe}/>
       </div>
-        <div id="projects" className="my-20 w-full flex flex-col items-center space-y-6 p-4">
+        <div id="projects" className="my-40 w-full flex flex-col items-center space-y-6 p-4">
         <ProjectDisplay projects={projects}/>
       </div>
-        <div id="contact" className="min-h-sreen w-full flex flex-col justify-center items-center space-y-6 p-4">
+        <div id="contact" className="min-h-1/2 w-full flex flex-col justify-center items-center space-y-6 p-4">
         <Contact/>
       </div>
     </div>
