@@ -3,7 +3,7 @@ import { IProject } from "@/models/projects";
 import Project from "./Project";
 import { useEffect, useState } from "react";
 import Image from 'next/image';
-
+import Link from "next/link";
 export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
     //useStates to set values for previews and their index
     const [preview, setPreview] = useState(false);
@@ -18,7 +18,9 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
                     {projects.map((project, i)=> (
                         <li key={i} onMouseEnter={() => setPreview(true)}
                                     onMouseLeave={() => setPreview(false)}
-                                    onMouseOver={() => setIndex(i)}><Project project={project}/></li>
+                                    onMouseOver={() => setIndex(i)}>
+                            <Link href={project.frontPreviewUrl} target="_blank"><Project project={project}/> </Link>
+                        </li>
                     ))}
                 </ul>
                 <div id="preview" className={` flex flex-col self-start
