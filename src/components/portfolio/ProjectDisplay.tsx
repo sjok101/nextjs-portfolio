@@ -21,12 +21,13 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
                                     onMouseOver={() => setIndex(i)}><Project project={project}/></li>
                     ))}
                 </ul>
-                <div id="preview" className={` ml-4 w-[244px] bg-slate-800/30
+                <div id="preview" className={` flex flex-col self-start
+                                                ml-4 w-[244px] h-auto bg-slate-800/30
                                                ${preview ? 'opacity-100' : 'opacity-0'} `}>
                     <div>{projects[index].name}</div>
                     <ul>
                         {projects[index].link.map((img, i) => (
-                            <li key={i}><Image src={img} alt ={"Preview"} width={230} height={125}></Image></li>
+                            <li key={i} className="py-5"><Image src={img} alt ={"Preview"} width={230} height={125}></Image></li>
                         ))}
                     </ul>
                 </div>
