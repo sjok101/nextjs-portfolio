@@ -12,8 +12,8 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
     return(
         <div>
             <p className="text-xl text-slate-200">Projects</p>
-            <div className="h-[800px] w-[1000px] text-slate-300
-                            flex flex-row">
+            <div className="w-[1000px] bg-slate-900/20 text-slate-300
+                            flex flex-row p-3">
                 <ul>
                     {projects.map((project, i)=> (
                         <li key={i} onMouseEnter={() => setPreview(true)}
