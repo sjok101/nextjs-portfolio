@@ -12,7 +12,7 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
     return(
         <div>
             <p className="text-xl text-slate-200">Projects</p>
-            <div className="h-[800px] w-[800px] text-slate-300
+            <div className="h-[800px] w-[1000px] text-slate-300
                             flex flex-row">
                 <ul>
                     {projects.map((project, i)=> (
@@ -22,12 +22,12 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
                     ))}
                 </ul>
                 <div id="preview" className={` flex flex-col self-start
-                                                ml-4 w-[244px] h-auto bg-slate-800/30
+                                                ml-4 w-[344px] h-auto bg-slate-800/30
                                                ${preview ? 'opacity-100' : 'opacity-0'} `}>
                     <div>{projects[index].name}</div>
                     <ul>
                         {projects[index].link.map((img, i) => (
-                            <li key={i} className="py-5"><Image src={img} alt ={"Preview"} width={230} height={125}></Image></li>
+                            <li key={i} className="py-5 px-3.5"><Image src={img} alt ={"Preview"} width={330} height={175}></Image></li>
                         ))}
                     </ul>
                 </div>
