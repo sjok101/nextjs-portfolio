@@ -6,6 +6,7 @@ export interface IProject extends Document {
     name: string;
     link: string[];
     frontPreview: string;
+    frontPreviewUrl: string;
     description: string;
 }
 
@@ -14,6 +15,7 @@ const ProjectSchema: Schema = new Schema<IProject>({
     name: {type: String, required: true},
     link: [{type: String, required: true}],
     frontPreview: {type: String, required: true},
+    frontPreviewUrl: {type: String, required: true},
     description: {type: String, required: true}
 })
 
