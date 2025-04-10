@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+
 
 export default function SocialMedia(){
     const socialMediaStyle = "h-60 w-60 bg-gradient-to-b from-sky-400 to-sky-900/90 block mx-11 my-10 border p-5 text-slate-100/90 border-black"
