@@ -25,18 +25,18 @@ export default async function Home() {
       <NavBar/>
       <TopButton/>
       <BackgroundInfo/>
-      <div id="autoslider" className=" min-h-screen w-auto flex flex-col justify-center items-center space-y-6 p-4">
+      <div id="autoslider" className="my-10 w-auto flex flex-col justify-center items-center space-y-6 p-4">
         <h2 className="m-10 text-3xl font-semibold text-white">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
         <AutoSlider projects={projects}/>
         <SocialMedia/>
       </div>      
-      <div id="about" className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+      <div id="about" className="my-20 w-full flex flex-col justify-center items-center space-y-6 p-4">
         <About aboutMe={aboutMe}/>
       </div>
-        <div id="projects" className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+        <div id="projects" className="my-20 w-full flex flex-col items-center space-y-6 p-4">
         <ProjectDisplay projects={projects}/>
       </div>
-        <div id="contact" className="min-h-screen w-full flex flex-col justify-center items-center space-y-6 p-4">
+        <div id="contact" className="min-h-sreen w-full flex flex-col justify-center items-center space-y-6 p-4">
         <Contact/>
       </div>
     </div>
