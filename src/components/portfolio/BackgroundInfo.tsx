@@ -7,7 +7,7 @@ export default function BackgroundInfo(){
 
     useEffect(() => {
         const handleResize = () => {
-            setIsVisible(window.innerWidth > 1235)
+            setIsVisible(window.innerWidth > 1500)
         }
         handleResize();
         window.addEventListener("resize", handleResize);
@@ -16,10 +16,10 @@ export default function BackgroundInfo(){
     
     
     return(
-        <div className="z-0 text-slate-200/90 font-semibold absolute top-50 left-10">
-            <div className={`p-6 bg-gradient-to-l from-sky-500/50 to-transparent
-                            transition-opacity duration-200 ease-in-out
+        <div className={`z-0 text-slate-200/90 font-semibold absolute top-50 left-10
+                        transition-opacity duration-200 ease-in-out
                             ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`p-6 bg-gradient-to-l from-sky-500/50 to-transparent`}>
                             
                 <ul className="text-xl mb-1 text-sky-200/70">Relevant Links</ul>
                 <ul><Link href={'https://www.gmu.edu/'} target="_blank">George Mason University</Link></ul>
