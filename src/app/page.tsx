@@ -25,7 +25,7 @@ export default async function Home() {
       <TopButton/>
       <BackgroundInfo/>
       <div id="autoslider" className="my-10 w-auto flex flex-col justify-center items-center space-y-6 p-4">
-        <h2 className="m-10 text-3xl font-semibold text-white">Hello world, I'm {aboutMe!.name}, Software Engineer.</h2>
+        <h2 className="m-10 text-3xl font-semibold text-white">Hello world, I&#39;m {aboutMe!.name}, Software Engineer.</h2>
         <AutoSlider projects={projects}/>
         <SocialMedia/>
       </div>      
