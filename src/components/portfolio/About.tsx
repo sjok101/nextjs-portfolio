@@ -22,8 +22,8 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
             setRightClicked(false);
             setFade(true);
         }
-    }, [leftClicked, rightClicked])
-    
+    }, [leftClicked, rightClicked, aboutMe])
+
     //set timer for fade in
     useEffect(()=>{
         const timeout = window.setTimeout(()=>{
