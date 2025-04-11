@@ -29,7 +29,7 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
                     <div>{projects[index].name}</div>
                     <ul>
                         {projects[index].link.map((img, i) => (
-                            <li key={i} className="py-5 px-3.5"><Image src={img} alt ={"Preview"} width={480} height={225}></Image></li>
+                            <li key={i} className="py-5 px-3.5"><Image src={img} alt ={"Preview"} width={480} height={260}></Image></li>
                         ))}
                     </ul>
                 </div>
