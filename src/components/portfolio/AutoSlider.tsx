@@ -34,7 +34,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
             className={`h-[400px] w-[900px] flex justify-center  transition-opacity duration-500 bg-slate-900/50 ${fade ? 'opacity-100' : 'opacity-0'}`}
             >
                 <Link href={projects[count].frontPreviewUrl} target="_blank" className="block">
-                    <img src={projects[count].frontPreview} alt="AutoSlidePreview" height={500} width={700}></img>
+                    <Image src={projects[count].frontPreview} alt="AutoSlidePreview" height={500} width={700}></Image>
                 </Link>
                 <div className="ml-1 flex flex-col self-start w-[200px]">
                     <h3 className = "text-xl font-semibold text-slate-100">{projects[count].name}</h3>
