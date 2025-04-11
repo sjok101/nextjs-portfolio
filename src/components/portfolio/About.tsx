@@ -1,7 +1,7 @@
 'use client'
 import { IAboutMe } from "@/models/aboutMe";
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
     
     const [count, setCount] = useState(0);
@@ -22,7 +22,8 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
             setRightClicked(false);
             setFade(true);
         }
-    })
+    }, [leftClicked, rightClicked])
+    
     //set timer for fade in
     useEffect(()=>{
         const timeout = window.setTimeout(()=>{
@@ -49,7 +50,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
                             h-[600px] w-[1000px] flex flex-row items-start
                             transition-opacity ease-in-out duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}>
                             
-                <img src="https://www.placehold.co/800x600"></img>
+                <Image src="/" alt="Placeholder" width={800} height={600}></Image>
                 <div className={`w-[250px] text-center
                                 ${fade ? 'opacity-0' : 'opacity-100'}`}>
                     <p className="text-left p-5 pt-7">{aboutMe!.heading[count]}</p>
