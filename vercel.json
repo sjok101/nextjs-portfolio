@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "env": {
+        "MONGODB_URI": "@mongodb_uri"
+    },
+    "builds": [
+        {
+            "src" : "src/app/layout.tsx",
+            "use" : "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "src/app/layout.tsx",
+            "methods": [
+                "GET",
+                "POST"
+            ]
+        }
+    ]
+}
