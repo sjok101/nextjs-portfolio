@@ -15,6 +15,7 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
             <div className="w-[1200px] bg-slate-900/20 text-slate-300
                             flex flex-row p-3">
                 <ul>
+                    {/* On mouse enter and exit with allow user to view the preview. On mouse over will indicate the project index to view the proper preview. */}
                     {projects.map((project, i)=> (
                         <li key={i} onMouseEnter={() => setPreview(true)}
                                     onMouseLeave={() => setPreview(false)}

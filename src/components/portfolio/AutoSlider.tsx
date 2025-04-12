@@ -9,6 +9,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
     const [count, setCount] = useState(0);
     const [fade, setFade] = useState(true);
 
+    //Uses a timer to set the fade effect and raise the count (project index)
     useEffect(() => {
         const interval = window.setInterval(()=>{
             setFade(false);
@@ -25,7 +26,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
 
     return(
         <div className="z-10 flex flex-row items-center">
-            {/* set >0 due to state updates */}
+            {/*Go left button, set >0 due to state updates. No fade, immediate transition. */}
             <button onClick={() => setCount(prev => count>0 ? (prev-1) % projects.length : projects.length-1)}
                     className={buttonStyle}>Left</button>
         <div className="h-[400px] w-[900px] border relative transition duration-500 ease-in-out mx-auto">
@@ -42,6 +43,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
                 </div>
             </div>
         </div>
+        {/* Go right button */}
         <button onClick={() => setCount(prev => (prev+1) % projects.length)}
                 className={buttonStyle}>Right</button>
         </div>

@@ -6,8 +6,7 @@ export default function Contact(){
     const textFieldStyle = 'mb-5 bg-slate-100'
     
     return(
-        //implement a contact form
-        //send the data via router
+        //Send the form via server action.
         <div>
             <h1 className="text-xl text-slate-100/90">Contact Form</h1>
             <div className="p-1 bg-slate-900/50 text-slate-800/90 h-[600px] w-[800px]">

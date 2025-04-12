@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        //smooth scrolling
         className={`${geistSans.variable} ${geistMono.variable} antialiased  min-w-[960px] min-h-[955px] overflow-auto`}
       >
         {children}

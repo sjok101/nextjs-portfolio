@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 export default function BackgroundInfo(){
 
     const [isVisible, setIsVisible] = useState(true);
-
+    //Hide component based on the windows innerWidth (minimum allowable width).
     useEffect(() => {
         const handleResize = () => {
             setIsVisible(window.innerWidth > 1500)

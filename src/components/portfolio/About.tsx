@@ -8,9 +8,9 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
     const [leftClicked, setLeftClicked] = useState(false);
     const [rightClicked, setRightClicked] = useState(false);
     const [fade, setFade] = useState(false);
-    //main transition useEffect
     const buttonStyle= 'text-slate-300 m-2 h-[120px] w-[60px] bg-slate-800/75'
-
+    
+    //main transition useEffect
     useEffect(()=>{
         if(leftClicked){
             setCount(prev => (prev-1) % aboutMe!.heading.length)
@@ -24,7 +24,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
         }
     }, [leftClicked, rightClicked, aboutMe])
 
-    //set timer for fade in
+    //Set timer for fade in
     useEffect(()=>{
         const timeout = window.setTimeout(()=>{
             setFade(false);
@@ -38,7 +38,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
         }
     }, [count])
     
-    //applied fade to both container and text, transition to container only
+    //Applied fade to both container and text, transition to container only
     return(
         <div>
             <h1 className="ml-[76px] text-xl text-slate-100/90">About me</h1>
