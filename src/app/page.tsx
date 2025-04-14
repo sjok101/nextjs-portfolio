@@ -26,7 +26,7 @@ export default async function Home() {
       <TopButton/>
       <div className="flex flex-row justify-center">
         <BackgroundInfo/>
-        <div id="componentContainer">
+        <div id="sectionContainer" className=" mx-16">
           <NavBar/>
           {/* Components flex */}
           <div id="autoslider" className="my-10 space-y-6">
