@@ -29,7 +29,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
             {/*Go left button, set >0 due to state updates. No fade, immediate transition. */}
             <button onClick={() => setCount(prev => count>0 ? (prev-1) % projects.length : projects.length-1)}
                     className={`${buttonStyle} left-[-80px]`}>Left</button>
-        <div className=" w-[1000px] border transition duration-500 ease-in-out ">
+        <div className=" w-[1000px] border-black transition duration-500 ease-in-out ">
             <div 
             key={projects[count]._id as string}
             className={` w-[1000px] flex justify-center  transition-opacity duration-500 bg-slate-900/50 ${fade ? 'opacity-100' : 'opacity-0'}`}
