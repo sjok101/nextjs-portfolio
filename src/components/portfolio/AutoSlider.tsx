@@ -38,7 +38,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
                     <Image src={projects[count].frontPreview} alt="AutoSlidePreview" height={500} width={700}></Image>
                 </Link>
                 <div className="ml-1 flex flex-col self-start w-[200px]">
-                    <h3 className = "text-xl font-semibold text-slate-100">{projects[count].name}</h3>
+                    <h3 className = "mb-3 text-xl font-semibold text-slate-100">{projects[count].name}</h3>
                     <p className="text-slate-100/90 ">{projects[count].description}</p>
                 </div>
             </div>
