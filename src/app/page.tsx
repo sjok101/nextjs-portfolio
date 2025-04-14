@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     //Set container BG color
-    <div id="top" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
+    <div id="top" className="min-h-screen min-w-[1500px] bg-gradient-to-b from-sky-800 to-sky-950">
       <div className="h-[80px]"></div>
       {/* Components absolute/fixed*/}
       <TopButton/>
