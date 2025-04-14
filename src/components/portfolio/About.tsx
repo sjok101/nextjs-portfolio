@@ -47,10 +47,11 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
                 onClick={() => setLeftClicked(true)}
                 id="about-left" className={buttonStyle}>Left</button>
             <div className= {`border-black bg-slate-900/50 bg-opacity-80 text-slate-300
-                            h-[600px] w-[1000px] flex flex-row items-start
+                             w-[1000px] flex flex-row items-start
                             transition-opacity ease-in-out duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}>
-                            
-                <Image src="/" alt="Placeholder" width={800} height={600}></Image>
+                <div id="fadeNow" ></div>
+                <Image src={aboutMe!.img[count]} alt="Placeholder" width={800} height={600}
+                        className={`m-auto ${fade ? 'opacity-0' : 'opacity-100'}`}></Image>
                 <div className={`w-[250px] text-center
                                 ${fade ? 'opacity-0' : 'opacity-100'}`}>
                     <p className="text-left p-5 pt-7">{aboutMe!.heading[count]}</p>
