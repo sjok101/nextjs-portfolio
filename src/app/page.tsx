@@ -23,23 +23,26 @@ export default async function Home() {
     <div id="top" className="min-h-screen bg-gradient-to-b from-sky-800 to-sky-950">
       <div className="h-[80px]"></div>
       {/* Components absolute/fixed*/}
-      <NavBar/>
       <TopButton/>
-      <BackgroundInfo/>
-      {/* Components flex */}
-      <div id="autoslider" className="my-10 w-auto flex flex-col justify-center items-center space-y-6 p-4">
-        <h2 className="m-10 text-3xl font-semibold text-white">Hello world, I&#39;m {aboutMe!.name}, Software Engineer.</h2>
-        <AutoSlider projects={projects}/>
-        <SocialMedia/>
-      </div>      
-      <div id="about" className="my-40 w-full flex flex-col justify-center items-center space-y-6 p-4">
-        <About aboutMe={aboutMe}/>
-      </div>
-        <div id="projects" className="my-40 w-full flex flex-col items-center space-y-6 p-4">
-        <ProjectDisplay projects={projects}/>
-      </div>
-        <div id="contact" className="min-h-1/2 w-full flex flex-col justify-center items-center space-y-6 p-4">
-        <Contact/>
+      <div className="flex flex-row justify-center">
+        <BackgroundInfo/>
+        <div id="componentContainer">
+          <NavBar/>
+          {/* Components flex */}
+          <div id="autoslider" className="my-10 space-y-6">
+            <AutoSlider projects={projects}/>
+            <SocialMedia/>
+          </div>      
+          <div id="about" className="my-40 space-y-6">
+            <About aboutMe={aboutMe}/>
+          </div>
+            <div id="projects" className="my-40 space-y-6">
+            <ProjectDisplay projects={projects}/>
+          </div>
+            <div id="contact" className="mb-40">
+            <Contact/>
+          </div>
+        </div>
       </div>
     </div>
   );
