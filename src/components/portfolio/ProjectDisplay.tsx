@@ -12,7 +12,7 @@ export default function ProjectDisplay( {projects}:{ projects: IProject[] }){
     return(
         <div>
             <p className="text-xl text-slate-200">Projects</p>
-            <div className="w-[900px] bg-slate-900/20 text-slate-300
+            <div className="w-[1000px] bg-slate-900/20 text-slate-300
                             flex flex-row p-3">
                 <ul>
                     {/* On mouse enter and exit with allow user to view the preview. On mouse over will indicate the project index to view the proper preview. */}

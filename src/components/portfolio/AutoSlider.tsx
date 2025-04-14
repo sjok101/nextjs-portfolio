@@ -29,13 +29,13 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
             {/*Go left button, set >0 due to state updates. No fade, immediate transition. */}
             <button onClick={() => setCount(prev => count>0 ? (prev-1) % projects.length : projects.length-1)}
                     className={`${buttonStyle} left-[-80px]`}>Left</button>
-        <div className="h-[400px] w-[900px] border transition duration-500 ease-in-out ">
+        <div className=" w-[1000px] border transition duration-500 ease-in-out ">
             <div 
             key={projects[count]._id as string}
-            className={`h-[400px] w-[900px] flex justify-center  transition-opacity duration-500 bg-slate-900/50 ${fade ? 'opacity-100' : 'opacity-0'}`}
+            className={` w-[1000px] flex justify-center  transition-opacity duration-500 bg-slate-900/50 ${fade ? 'opacity-100' : 'opacity-0'}`}
             >
                 <Link href={projects[count].frontPreviewUrl} target="_blank" className="block">
-                    <Image src={projects[count].frontPreview} alt="AutoSlidePreview" height={500} width={700}></Image>
+                    <Image src={projects[count].frontPreview} alt="AutoSlidePreview" height={500} width={1000}></Image>
                 </Link>
                 <div className="ml-1 flex flex-col self-start w-[200px]">
                     <h3 className = "mb-3 text-xl font-semibold text-slate-100">{projects[count].name}</h3>

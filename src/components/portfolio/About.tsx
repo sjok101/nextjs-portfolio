@@ -48,10 +48,10 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
                     id="about-left" className={`${buttonStyle} left-[-80px]`}>Left
                     </button>
                 <div className= {`border-black bg-slate-900/50 bg-opacity-80 text-slate-300
-                                w-[900px] flex flex-row items-start
+                                w-[1000px] flex flex-row items-start
                                 transition-opacity ease-in-out duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}>
                     <div id="fadeNow" ></div>
-                    <Image src={aboutMe!.img[count]} alt="Placeholder" width={700} height={600}
+                    <Image src={aboutMe!.img[count]} alt="Placeholder" width={800} height={600}
                             className={`m-auto ${fade ? 'opacity-0' : 'opacity-100'}`}></Image>
                     <div className={`w-[250px] text-center
                                     ${fade ? 'opacity-0' : 'opacity-100'}`}>
