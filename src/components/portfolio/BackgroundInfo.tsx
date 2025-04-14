@@ -18,7 +18,7 @@ export default function BackgroundInfo(){
     return(
         <div className={`z-0 text-slate-200/90 font-semibold 
                         transition-opacity duration-200 ease-in-out
-                            ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                            ${isVisible ? 'block' : 'hidden'}`}>
             <div className={`p-6 bg-gradient-to-l from-sky-500/50 to-transparent`}>
                             
                 <ul className="text-xl mb-1 text-sky-200/70">Relevant Links</ul>
