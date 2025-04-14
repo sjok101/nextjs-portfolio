@@ -9,7 +9,7 @@ export default function Contact(){
         //Send the form via server action.
         <div>
             <h1 className="text-xl text-slate-100/90">Contact Form</h1>
-            <div className="p-1 bg-slate-900/50 text-slate-800/90 h-[600px] w-[800px]">
+            <div className="p-1 bg-slate-900/50 text-slate-800/90 h-[600px] w-[900px]">
                 <form action={handleSubmit} className="m-4 flex flex-col bg-slate-600/10">
 
                     <input
