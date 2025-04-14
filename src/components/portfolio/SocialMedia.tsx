@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function SocialMedia(){
-    const socialMediaStyle = "h-60 w-60 bg-gradient-to-b from-sky-400 to-sky-900/90 block mx-11 my-10 border p-5 text-slate-100/90 border-black"
+    const socialMediaStyle = "h-60 w-60 bg-gradient-to-b from-sky-400 to-sky-900/90 block my-10 border p-5 text-slate-100/90 border-black"
     return(
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-between w-[900px]">
             <Link href="https://www.github.com" target="_blank" className={socialMediaStyle}>
                 <Image src="images/github.svg" alt="Github Logo" width={240} height={240}></Image>
                 <span className="cursor-pointer">GitHub</span>
