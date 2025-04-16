@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image"
 export default function AutoSlider( {projects} : {projects: IProject[]} ){
     
-    const buttonStyle= 'text-slate-300 h-[120px] w-[60px] bg-slate-800/75 absolute'
+    const buttonStyle= 'text-5xl font-semibold text-slate-300 h-[120px] w-[60px] bg-slate-800/75 absolute'
     const [count, setCount] = useState(0);
     const [fade, setFade] = useState(true);
 
@@ -28,8 +28,8 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
         <div className="z-10 flex flex-row items-center relative">
             {/*Go left button, set >0 due to state updates. No fade, immediate transition. */}
             <button onClick={() => setCount(prev => count>0 ? (prev-1) % projects.length : projects.length-1)}
-                    className={`${buttonStyle} left-[-80px]`}>Left</button>
-        <div className=" w-[1000px] border-black transition duration-500 ease-in-out ">
+                    className={`${buttonStyle} left-[-80px]`}>{'<'}</button>
+        <div className=" w-[1000px] border-black transition duration-500 ease-in-out">
             <div 
             key={projects[count]._id as string}
             className={` w-[1000px] flex justify-center  transition-opacity duration-500 bg-slate-900/50 ${fade ? 'opacity-100' : 'opacity-0'}`}
@@ -45,7 +45,7 @@ export default function AutoSlider( {projects} : {projects: IProject[]} ){
         </div>
         {/* Go right button */}
         <button onClick={() => setCount(prev => (prev+1) % projects.length)}
-                className={`${buttonStyle} right-[-80px]`}>Right</button>
+                className={`${buttonStyle} right-[-80px]`}>{'>'}</button>
         </div>
     )
 }

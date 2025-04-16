@@ -8,7 +8,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
     const [leftClicked, setLeftClicked] = useState(false);
     const [rightClicked, setRightClicked] = useState(false);
     const [fade, setFade] = useState(false);
-    const buttonStyle= 'text-slate-300 m-2 h-[120px] w-[60px] bg-slate-800/75 absolute'
+    const buttonStyle= 'text-5xl font-semibold text-slate-300 m-2 h-[120px] w-[60px] bg-slate-800/75 absolute'
     
     //main transition useEffect
     useEffect(()=>{
@@ -45,7 +45,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
             <div className="z-10 flex flex-row items-center relative">
                     <button 
                     onClick={() => setLeftClicked(true)}
-                    id="about-left" className={`${buttonStyle} left-[-80px]`}>Left
+                    id="about-left" className={`${buttonStyle} left-[-80px]`}>{'<'}
                     </button>
                 <div className= {`border-black bg-slate-900/50 bg-opacity-80 text-slate-300
                                 w-[1000px] flex flex-row items-start
@@ -61,7 +61,7 @@ export default function About( {aboutMe} : {aboutMe: IAboutMe | null} ){
                 </div>
                     <button 
                     onClick={() => setRightClicked(true)}
-                    id="about-right" className={`${buttonStyle} right-[-80px]`}>Right
+                    id="about-right" className={`${buttonStyle} right-[-80px]`}>{'>'}
                     </button>
             </div>
         </div>
