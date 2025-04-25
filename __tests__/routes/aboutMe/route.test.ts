@@ -2,7 +2,6 @@ import { AboutMe } from "@/models/aboutMe";
 import { GET } from "@/app/api/aboutMe/route"
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import { NextRequest } from "next/server";
 
 dotenv.config();
 
