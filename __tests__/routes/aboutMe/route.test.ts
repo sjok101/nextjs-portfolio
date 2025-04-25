@@ -25,8 +25,7 @@ afterAll(async () => {
 describe('AboutMe Routes', ()=>{
     it('retrieves a single aboutMe model', async() => {
         aboutMe = await AboutMe.create({ name: 'Alice', email: 'alice@test.com', heading: ['head1'], description:['desc1'], img:['img1'] });
-        
-        
+
         const res = await GET();
 
         const json = await res.json();
