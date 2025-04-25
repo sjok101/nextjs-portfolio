@@ -45,7 +45,7 @@ describe('Projects Routes', ()=>{
         expect(res.status).toBe(201);
     })
 
-    it('can retrieve projects', async() => {
+    it('can get projects', async() => {
         // await Project.create(mockBody);
         const res = await GET();
         const json = await res.json();
