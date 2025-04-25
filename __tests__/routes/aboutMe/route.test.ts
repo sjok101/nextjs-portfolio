@@ -17,6 +17,11 @@ beforeAll(async () => {
     
 });
 
+afterAll(async () => {
+    await AboutMe.deleteMany({});
+    await mongoose.disconnect();
+  });
+
 describe('AboutMe Routes', ()=>{
     it('retrieves a single aboutMe model', async() => {
         aboutMe = await AboutMe.create({ name: 'Alice', email: 'alice@test.com', heading: ['head1'], description:['desc1'], img:['img1'] });

@@ -17,8 +17,13 @@ beforeAll(async () => {
     
 });
 
-describe('AboutMe Routes', ()=>{
-    it('retrieves a single aboutMe model', async() => {
+afterAll(async () => {
+    await Form.deleteMany({});
+    await mongoose.disconnect();
+  });
+
+describe('Form Routes', ()=>{
+    it('retrieves all forms', async() => {
         forms = await Form.create([
             {name: 'Alice', email: 'alice@test.com', message: 'This is a test'},
             {name: 'John', email: 'john@test.com', message: 'This is another test'}
