@@ -16,7 +16,6 @@ export async function GET() {
 export async function POST(req: NextRequest){
     await connectDB();
     const body = await req.json();
-    console.log(body);
     const newProject = await Project.create(body);
     return new Response(JSON.stringify(newProject), {
         status: 201,
