@@ -1,5 +1,7 @@
 import { connectDB } from "@/util/mongoDB";
 import { Project } from "@/models/projects";
+import { NextRequest } from 'next/server';
+import type { IProject } from '@/models/projects';
 
 export async function GET() {
     await connectDB();
@@ -11,9 +13,9 @@ export async function GET() {
     })
 }
 
-export async function POST(req:typeof Project){
+export async function POST(req: NextRequest){
     await connectDB();
-    const body = await req.find
+    const body = await req.json();
     console.log(body);
     const newProject = await Project.create(body);
     return new Response(JSON.stringify(newProject), {
@@ -22,8 +24,5 @@ export async function POST(req:typeof Project){
             "Content-Type": "application/json",
         }
     })
-    
-    
-
 }
 
